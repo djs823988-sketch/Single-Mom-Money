@@ -1,0 +1,239 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single Mom Money | Financial Freedom Course</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #1a535c;
+      --accent: #4ecdc4;
+      --bg: #f7fff7;
+      --text: #2f3e46;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      padding-bottom: 60px;
+    }
+
+    header {
+      background: white;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 6px solid var(--primary);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 30px;
+      padding: 0 20px;
+    }
+
+    /* LEFT SIDE (COURSE PREVIEW) */
+    .preview {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .preview div {
+      background: white;
+      border-radius: 14px;
+      padding: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    }
+
+    .preview div:first-child {
+      grid-column: span 2;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+    }
+
+    .preview h2 {
+      margin-bottom: 10px;
+    }
+
+    .preview p {
+      line-height: 1.7;
+    }
+
+    /* RIGHT SIDE (BUY BOX) */
+    .details {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 20px;
+      align-self: start;
+    }
+
+    .price {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 5px;
+    }
+
+    .price span {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .features-list {
+      margin: 25px 0;
+      padding: 20px;
+      background: #f0f4f8;
+      border-radius: 12px;
+      list-style: none;
+    }
+
+    .features-list li {
+      margin-bottom: 10px;
+      font-weight: 600;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .description {
+      line-height: 1.8;
+      font-size: 1.05rem;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: grid;
+      gap: 15px;
+    }
+
+    input, button {
+      padding: 15px;
+      border-radius: 8px;
+      border: 2px solid #eee;
+      font-size: 1rem;
+    }
+
+    button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      font-weight: 700;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    button:hover {
+      background: var(--accent);
+      color: var(--primary);
+    }
+
+    .login {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.9rem;
+    }
+
+    .login a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    @media (max-width: 1000px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Single Mom Money</h1>
+  <p>Step-by-step financial freedom using proven systems</p>
+</header>
+
+<main class="container">
+
+  <!-- LEFT CONTENT -->
+  <section class="preview">
+    <div>
+      <h2>Build Income. Build Stability. Build Freedom.</h2>
+      <p>
+        This course is designed specifically for single moms who want to take control
+        of their finances without overwhelm. Learn real systems, not hype.
+      </p>
+    </div>
+
+    <div>
+      <h2>What You’ll Learn</h2>
+      <p>• Budgeting systems that actually work<br>
+         • Income strategies you can start fast<br>
+         • Debt elimination frameworks</p>
+    </div>
+
+    <div>
+      <h2>Who This Is For</h2>
+      <p>Single moms who want clear steps, not guesswork — and results that last.</p>
+    </div>
+
+    <div>
+      <h2>Course Format</h2>
+      <p>Instant-access PDF guide you can download and revisit anytime.</p>
+    </div>
+  </section>
+
+  <!-- RIGHT BUY BOX -->
+  <aside class="details">
+    <div class="price">$49 <span>one-time</span></div>
+
+    <ul class="features-list">
+      <li>✅ Instant PDF access</li>
+      <li>✅ Lifetime ownership</li>
+      <li>✅ Simple, clear steps</li>
+      <li>✅ No subscriptions</li>
+    </ul>
+
+    <div class="description">
+      You don’t need another motivational speech — you need a system.
+      This course gives you a clear plan you can follow at your own pace.
+    </div>
+
+    <!-- This form should POST to /pay -->
+    <form method="POST" action="/pay">
+      <button type="submit">Get Instant Access</button>
+    </form>
+
+    <div class="login">
+      Already purchased? <a href="/login">Log in here</a>
+    </div>
+  </aside>
+
+</main>
+
+</body>
+</html>
